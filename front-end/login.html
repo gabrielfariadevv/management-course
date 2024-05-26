@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/loginStyle.css">
-	<link rel="script" href="scripts/login.js">
+	<script src="scripts/login.js" defer></script>
 	<title>Login</title>
 </head>
 
@@ -18,29 +18,41 @@
 			<div class="form-inner">
 				<form action="#" class="login">
 					<div class="field">
-						<input type="text" placeholder="Sua matrícula" required>
+						<input type="text" placeholder="Nome" required id="name">
 					</div>
 					<div class="field">
-						<input type="password" placeholder="Sua senha" required>
-					</div>
-
-
-					<!-- <div class="field">
-						<input type="text" placeholder="Email Address" required>
+						<input type="password" placeholder="Sua senha" required id="password">
 					</div>
 					<div class="field">
-						<input type="text" placeholder="Confirm password" required>
+						<input type="text" placeholder="Sua matrícula" required id="registrationNumber">
 					</div>
 					<div class="field">
-						<input type="text" placeholder="Email Address" required>
-					</div> -->
-
-					
+						<input type="text" placeholder="email" required id="email">
+					</div>
+					<div class="field">
+						<input type="text" placeholder="admin" required id="admin">
+					</div>
 					<div class="field btn">
 						<div class="btn-layer"></div>
-						<input type="submit" value="Entrar">
+						<input onclick="savePost()" type="submit" value="Entrar">
 					</div>
 				</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 				<form action="#" class="signup">
 					<div class="field">
 						<input type="text" placeholder="Email Address" required>
@@ -61,7 +73,7 @@
 						<input type="text" placeholder="Other Field" required>
 					</div>
 				</form>
-				
+
 			</div>
 		</div>
 	</div>

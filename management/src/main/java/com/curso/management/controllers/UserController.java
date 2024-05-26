@@ -21,7 +21,8 @@ public class UserController {
         return ResponseEntity.ok(users);
     }
 
-    @PostMapping("/users")
+    @PostMapping("/users/post")
+    @CrossOrigin(origins = "http://localhost:8081")
     public ResponseEntity<User> saveUsers(
             @RequestBody User user){
         User savedUser = repository.save(user);

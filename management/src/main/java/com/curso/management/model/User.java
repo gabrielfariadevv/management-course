@@ -1,22 +1,21 @@
 package com.curso.management.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@Table(name = "users_tb")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-    private String registerNumber;
+    private String registrationNumber;
     private String email;
 
     //if user is an admin should have the following variable as true
     private boolean admin;
+    private String password;
 
     //Getters and setters
 
@@ -36,12 +35,12 @@ public class User {
         this.name = name;
     }
 
-    public String getRegisterNumber() {
-        return registerNumber;
+    public String getRegistrationNumber() {
+        return registrationNumber;
     }
 
-    public void setRegisterNumber(String registerNumber) {
-        this.registerNumber = registerNumber;
+    public void setRegistrationNumber(String registerNumber) {
+        this.registrationNumber = registerNumber;
     }
 
     public String getEmail() {
